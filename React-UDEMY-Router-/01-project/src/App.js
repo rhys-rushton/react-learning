@@ -2,7 +2,9 @@ import keyConceptsImage from './assets/images/key-concepts.png';
 import componentsImage from './assets/images/components.png';
 import stateImage from './assets/images/state.png';
 import eventsImage from './assets/images/events.png';
-import Concept from './components/Concept';
+
+
+import ConceptItem from './components/ConceptItem'
 
 const concepts = [
   {
@@ -33,7 +35,9 @@ function App() {
         <h1>Key React Concepts</h1>
         <p>Selected key React concepts you should know about</p>
       </header>
-      <Concept data={concepts} />
+     
+        <ConceptItem data = {concepts}/>
+      
     </div>
   );
 }
