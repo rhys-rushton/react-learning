@@ -13,3 +13,5 @@
 
 ## State and Working with Events ##
 - How are events handled in React? React leverages inbuilt html event listeners, events are prefaced in React with on... i.e. onClick and they are passed to the element in a similar way to props. Then what happens is the executable code gets passed to this prop. 
+
+- When you use a function as an argument for the state-setting function, React will automatically pass the current state as an argument to that function.
