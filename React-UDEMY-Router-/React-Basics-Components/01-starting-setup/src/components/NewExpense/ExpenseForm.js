@@ -1,7 +1,7 @@
 import './ExpenseForm.css'
 import {useState} from 'react'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     // Multiple Ways to Track State
     /*
     const [enteredTitle, setEnteredTitle] = useState('');
@@ -85,20 +85,39 @@ const ExpenseForm = () => {
         }
     }
 
+    const submitHandler = (event) => {
 
-    return <form>
+        // Prevent default of page being sent so we can load data. 
+        event.preventDefault();
+        
+        const expenseData = {
+            title: userInput.enteredTitle, 
+            amount: userInput.enteredAmount,
+            date: new Date(userInput.enteredDate)
+
+
+        }
+
+        props.onSaveExpenseData(expenseData);
+        inputChangeHandler('title', '');
+        inputChangeHandler('date', '');
+        inputChangeHandler('', '')
+
+    }
+
+    return <form onSubmit  = {submitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
                 <label>Title</label>
-                <input type = "text" onChange={(event) => inputChangeHandler('title', event.target.value)}></input>
+                <input type = "text" value ={userInput.enteredTitle} onChange={(event) => inputChangeHandler('title', event.target.value)}></input>
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
-                <input type = "number" onChange={amountChangeHandler} min="0.01" step="0.01"></input>
+                <input type = "number" value={userInput.enteredAmount} onChange={amountChangeHandler} min="0.01" step="0.01"></input>
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
-                <input type = "date" onChange={dateChangeHandler} min="2019-01-01" max ="2022-12-31" />
+                <input type = "date" value = {userInput.enteredDate} onChange={dateChangeHandler} min="2019-01-01" max ="2022-12-31" />
             </div>
             
         </div>
