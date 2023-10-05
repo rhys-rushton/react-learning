@@ -29,10 +29,10 @@ const ExpenseForm = (props) => {
 
     // State Value for the add expense button
     const [toggleVisibility, setToggleVisibility] = useState(false);
-    
 
 
-    
+
+
 
 
     // const titleChangeHandler = (event) => {
@@ -98,7 +98,7 @@ const ExpenseForm = (props) => {
 
         const expenseData = {
             title: userInput.enteredTitle,
-            amount: userInput.enteredAmount,
+            amount: +userInput.enteredAmount,
             date: new Date(userInput.enteredDate)
 
 
@@ -116,10 +116,10 @@ const ExpenseForm = (props) => {
 
         setToggleVisibility((prevState) => {
 
-           
+
 
             if (prevState === true) {
-            
+
                 return false;
             } else {
                 return true
@@ -146,7 +146,7 @@ const ExpenseForm = (props) => {
 
                 </div>
                 <div className="new-expense__actions">
-                    <button onClick = {setToggleVisibility} type="reset">Cancel</button>
+                    <button onClick={setToggleVisibility} type="reset">Cancel</button>
                     <button type="submit" >Add Expense</button>;
                 </div>
             </form>)
