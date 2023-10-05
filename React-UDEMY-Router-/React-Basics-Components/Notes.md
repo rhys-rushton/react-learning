@@ -19,3 +19,11 @@
 - Two way binding: Two-way data binding in React refers to the synchronization between the user interface and the state of the component, ensuring that any changes in the UI are immediately reflected in the state, and vice versa.
 
 - Derived State:  When your managing state for a component X that relies on it its state from component Y you don't want to be create a seperate state for component X. Instead you just create a variable and whatever functionality is required within the component. 
+
+- Controled Component: A value used in a component is passed on to a parent through props and received by a parent through props. 
+
+- stateful vs stateless components: in react apps some components will manage state and other components that don't manage state - they just output a value. 
+
+## Rendering Lists and Rendering Conditional Content ##
+
+- 'Keys' in react: this is a property that you add to react components which helps react when you start dynamically rednering components. Improves performance and prevents bugs. Allows react to uniquely identify components. 

@@ -29,7 +29,7 @@ const ExpenseForm = (props) => {
     
 
 
-    const titleChangeHandler = (event) => {
+   // const titleChangeHandler = (event) => {
         /*
         setUserInput({
             // Unpack current userInput state object
@@ -45,10 +45,10 @@ const ExpenseForm = (props) => {
 
         
 
-        setUserInput((prevState) => {
-            return { ...prevState, enteredTitle: event.target.value}
-        })
-    };
+        //setUserInput((prevState) => {
+           // return { ...prevState, enteredTitle: event.target.value}
+        //})
+    //};
 
     const amountChangeHandler = (event) => {
         setUserInput({
