@@ -32,14 +32,8 @@ function Expenses(props) {
 
     const dateHandler = (date) => {
         setFilteredYear(date);
-        
     }
 
-
-
-
-    
-    
     return (
         <li>
     <Card className="expenses">
