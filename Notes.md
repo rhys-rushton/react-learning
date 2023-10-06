@@ -29,3 +29,6 @@
 - 'Keys' in react: this is a property that you add to react components which helps react when you start dynamically rednering components. Improves performance and prevents bugs. Allows react to uniquely identify components. 
 - How do you dynamcially set style in react components? Via the style prop.
 - Why are two curly braces use for the style prop? Because the style prop expects a javascript object. 
+
+## Styling Components Dynamically ##
+- 
