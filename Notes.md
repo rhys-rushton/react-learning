@@ -30,5 +30,5 @@
 - How do you dynamcially set style in react components? Via the style prop.
 - Why are two curly braces use for the style prop? Because the style prop expects a javascript object. 
 
-## Styling Components Dynamically ##
+## Debugging React Apps ##
 - 
