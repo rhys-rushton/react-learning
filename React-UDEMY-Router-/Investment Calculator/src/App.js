@@ -1,12 +1,15 @@
 import logo from './assets/investment-calculator-logo.png';
 import Form from './Components/New-Expense/Form'
 import React, { useState } from 'react'
+import Result from './Components/Result/Result'
 
 function App() {
 
-  const inputData = [];
+  const [yearlyData, setYearlyData] = useState([]);
 
   const [inputState, setInputState] = useState('');
+
+
   const calculateHandler = (userInput) => {
     // Should be triggered when form is submitted
     // You might not directly want to bind it to the submit event on the form though...
@@ -32,8 +35,9 @@ function App() {
     }
 
     // do something with yearlyData ...
-    console.log(yearlyData)
-    console.log(userInput)
+    setYearlyData(yearlyData);
+
+    
   };
 
 
@@ -45,9 +49,10 @@ function App() {
 
 
     calculateHandler(input)
-
-    
   }
+
+
+
 
 
 
@@ -64,7 +69,7 @@ function App() {
 
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
-
+    <Result data = {yearlyData}  />
       <table className="result">
         <thead>
           <tr>
