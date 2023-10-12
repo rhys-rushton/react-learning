@@ -13,7 +13,7 @@ const Form = (props) => {
     investmentDuration: '0',
   });
 
-  const [yearlyData, setYearlyData] = useState([]);
+  
 
   const calculateHandler = (userInput) => {
     // Should be triggered when form is submitted
@@ -40,7 +40,7 @@ const Form = (props) => {
     }
 
     // do something with yearlyData ...
-    setYearlyData(yearlyData);
+    props.setYearlyData(yearlyData)
   };
 
 
@@ -86,6 +86,8 @@ const Form = (props) => {
          setInputState((prevState) => {
        return {...prevState, currentSaving: 0, yearlySaving: 0, expectedInterest: 0, investmentDuration: 0}
   })
+
+    props.setYearlyData([])
   }
 
 

@@ -30,5 +30,7 @@
 - How do you dynamcially set style in react components? Via the style prop.
 - Why are two curly braces use for the style prop? Because the style prop expects a javascript object. 
 
-## Debugging React Apps ##
-- 
+## Fragments Portals and Refs ##
+- JSX Limitations: Can't return adjacent jsx components. 
+- React.Fragment is a component that acts as a wrapper. 
+- Portals are a way to make elements that are meant to render above all others (i.e. modals) render properly - not nested. This is done by creating elements for them inside the index.html you then use react-dom amd createPortal method. Rendered HTML content is just moved somewhere else. 
