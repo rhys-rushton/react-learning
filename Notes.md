@@ -34,3 +34,11 @@
 - JSX Limitations: Can't return adjacent jsx components. 
 - React.Fragment is a component that acts as a wrapper. 
 - Portals are a way to make elements that are meant to render above all others (i.e. modals) render properly - not nested. This is done by creating elements for them inside the index.html you then use react-dom amd createPortal method. Rendered HTML content is just moved somewhere else. 
+- Ref's are ways to direclty access  html(JSX) elements. It means you access them imperatively as oppposed to declaratively. You don't want to overuse these. An example use case is using refs to access the state of input instead of using an onchange event handler which would be logging every single keystroke in the input.
+
+## Working with effects, and reducers. 
+- Effect = Side Effect
+- Side effects are events and tasks that happen outside of reacts main task of rendering jsx elements and managing state. 
+- useEffect Hook that manages side effects. 
+- this hook is takes a function that get executed after every component evaluation if the specified dependencies change. It also takes the dependencies. 
+-
