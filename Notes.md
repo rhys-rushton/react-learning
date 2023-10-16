@@ -41,4 +41,9 @@
 - Side effects are events and tasks that happen outside of reacts main task of rendering jsx elements and managing state. 
 - useEffect Hook that manages side effects. 
 - this hook is takes a function that get executed after every component evaluation if the specified dependencies change. It also takes the dependencies. 
--
+- Local storage with browsers is through local storage or cookies. 
+- useReducer() helps you manage complex state.
+- you tend to use useReducer when managing state becomes buggy and too complicated.
+
+## Context in React
+- If you need access to the state of some value in multiple components, what you can do is define it in a seperate file and export it and then import it wherever it is needed. 
