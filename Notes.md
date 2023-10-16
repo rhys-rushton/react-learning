@@ -47,3 +47,5 @@
 
 ## Context in React
 - If you need access to the state of some value in multiple components, what you can do is define it in a seperate file and export it and then import it wherever it is needed. 
+- Using context to manage state is a balance. For instance you don't want to use it for generic components like buttons because you may have a logout button that needs access to state but then what about a display button? They should receive onClick events as props. 
+- React context is not optimised for high frequency changes. 

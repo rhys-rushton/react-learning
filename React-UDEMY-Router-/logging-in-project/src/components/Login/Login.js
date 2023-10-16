@@ -107,7 +107,7 @@ const Login = (props) => {
 
   const validatePasswordHandler = () => {
     //setPasswordIsValid(enteredPassword.trim().length > 6);
-    dispatchEmail({type:'INPUT_BLUR'})
+    dispatchPassword({type:'INPUT_BLUR'})
   };
 
   const submitHandler = (event) => {
