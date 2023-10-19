@@ -49,3 +49,29 @@
 - If you need access to the state of some value in multiple components, what you can do is define it in a seperate file and export it and then import it wherever it is needed. 
 - Using context to manage state is a balance. For instance you don't want to use it for generic components like buttons because you may have a logout button that needs access to state but then what about a display button? They should receive onClick events as props. 
 - React context is not optimised for high frequency changes. 
+
+## Redux
+- Redux is a state mangement system for cross-component or app-wide state.
+- So this is state that is required by the whole app not just specific components.
+- Three main types of state: Local State - Cross Component State - App-Wide State
+- Local State: State that belongs to a single component. User Input.
+- Cross Component: State that affects multiple components.
+- App-Wide State: Stat tgat affects the entire application. User authentication for example.
+- Redux is similar to React Context.
+- React Context - Potential Disadvantages: complext setup/management for small application. In a bigger app you're going to have a lot of context.Performace for Context might not be great.  
+- How does Redux Work? Redux is about having one central data store in your application. All state is in one location for cross app state.
+- In Redux, components never directly manipulate store data. Instead there is a reducer function that does this. Components subsribe to the central data store and track changes to data. 
+- Reducer functions in redux not related to useReducer. 
+- We need to connect components and reducer functions so that we can trigger a data chage if the component is required to do that - i.e. logout.
+- Components dispaction Actions (objects that describe operation that Reducers should perform)
+- The reducer performs the action and spits out a new state which replaces the existing state in the central data store.
+
+
+
+# Router
+- Single Page Application Routing - possible to use multiple URLS even in a single page application.
+- Routing = Different URL Paths load different pages on the screen.
+- Having to constantly reload data when routing can be slow and also not lead to a great user experience.
+- SPAs are good for building complex user interfaces. This is because you make one request to the the server for the HTML/javascript when loading the site and then the javascript takes care of the rest on the client side from that point onward. 
+- React router allows us to listen to URL Changes and then load different content. 
+- There are three main steps that we need to go through when using react router: (1) Define the routes we want to support. Define the URL Paths we want to support and then also define which paths should be loaded for different paths. (2) we need to activate our router and load the route definitions defined in the first step. (3) Get all the components we want to load and have a means of navigating between these pages.
