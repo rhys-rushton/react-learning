@@ -1,13 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import MainNavigation from '../components/MainNavigation';
-import classes from './Root.module.css';
 
 
+
+// This is a layout wrapper that gets wrapped around all other routes.
+// Outlet Marks the place where child route elements should be rendered
 function RootLayout() {
     return (
         <>
             <MainNavigation/>
-            <main className={classes.content}>
+            <main >
             <Outlet />           
             </main>
             
